@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+```
+<div class="container">
+    <header>
+        <h1>Expense Tracker</h1>
+        <p>Track your daily expenses easily</p>
+    </header>
+
+    <section class="dashboard">
+        <div class="total-card">
+            <h3>Total Expenses</h3>
+            <h2 id="totalExpense">₹0.00</h2>
+        </div>
+
+        <div class="category-card food">
+            <h3>🍔 Food</h3>
+            <h2 id="foodTotal">₹0.00</h2>
+        </div>
+
+        <div class="category-card travel">
+            <h3>✈️ Travel</h3>
+            <h2 id="travelTotal">₹0.00</h2>
+        </div>
+
+        <div class="category-card shopping">
+            <h3>🛍️ Shopping</h3>
+            <h2 id="shoppingTotal">₹0.00</h2>
+        </div>
+
+        <div class="category-card education">
+            <h3>📚 Education</h3>
+            <h2 id="educationTotal">₹0.00</h2>
+        </div>
+    </section>
+
+    <section class="expense-form">
+        <h2>Add Expense</h2>
+
+        <form id="expenseForm">
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense name"
+                required
+            >
+
+            <input
+                type="number"
+                id="expenseAmount"
+                placeholder="Amount"
+                min="1"
+                required
+            >
+
+            <select id="expenseCategory" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Education">Education</option>
+            </select>
+
+            <input
+                type="date"
+                id="expenseDate"
+                required
+            >
+
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="expense-list">
+        <h2>Expense History</h2>
+
+        <div id="emptyMessage">
+            No expenses added yet.
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Expense</th>
+                        <th>Category</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseTable"></tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
